@@ -13,8 +13,8 @@ A simple Instagram like bot that likes posts based on the hashtags you provide. 
 ### Usage
 1. Run ```main.py```.
 2. The UI will open up. Enter all the inputs. Rest assured, your password is safe.
-3. Click on the 'Submit' button.
-4. Sit back and watch how the bot goes.
+3. Click on the 'Submit' button and wait a few seconds.
+4. Sit back and watch how the bot goes. 
 
 
 ### Contributing
