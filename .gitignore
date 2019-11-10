@@ -1,0 +1,5 @@
+*.spec
+__pycache__/
+bin/
+*.log
+.buildozer/
