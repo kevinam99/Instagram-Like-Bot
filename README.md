@@ -28,4 +28,4 @@ A simple Instagram like bot that likes posts based on the hashtags you provide. 
 ### Reach out to me on:
 1. [Twitter](https://www.twitter.com/kevin_codes)
 2. [Instagram](https://www.instagram.com/kevin.codes)
-3. Email [kevinam99@gmail.com](mailto:kevinam99@gmail.com)
+3. Email <kevinam99@gmail.com>
