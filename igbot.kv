@@ -1,0 +1,38 @@
+<MyGrid>:
+    username: username
+    password: password
+    hashtags: hashtags
+    GridLayout:
+        cols: 1
+        size: root.width - 200, root.height - 200
+        pos: 100, 100
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Username"
+            TextInput:
+                id: username
+                focus: True
+                write_tab: False
+                multiline: False
+
+            Label:    
+                text: "Password"
+            TextInput:
+                id: password
+                write_tab: False
+                password: True
+                multiline: False
+            
+            Label:    
+                text: "Hashtags"
+            TextInput:
+                id: hashtags
+                write_tab: False
+                multiline: False
+
+        Button:
+            id: submit_button
+            text: "Submit"
+            on_press: root.button()
