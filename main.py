@@ -6,9 +6,19 @@ from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 import scraper
-from webdriverdownloader import GeckoDriverDownloader
-gdd = GeckoDriverDownloader()
-gdd.download_and_install()
+import webdriverdownloader as wdd
+
+# For Firefox gecko driver: 
+gecko_dd = wdd.GeckoDriverDownloader()
+gecko_dd.download_and_install()
+
+# For Chrome driver:
+# chrome_dd = wdd.ChromeDriverDownloader()
+# chrome_dd.download_and_install()
+
+# For Opera driver:
+# opera_dd = wdd.OperaChromiumDriverDownloader()
+# opera_dd.download_and_install()
 
 class MyGrid(Widget):
     username = ObjectProperty(None)
@@ -23,7 +33,9 @@ class MyGrid(Widget):
             for hashtag in self.hashtags.text.split(','):
                 me.like_posts_in(hashtag)
             else:
-                print("Enter all the relevant inputs")
+                print("Enter all the relevant inputs. Exiting program...")
+                SystemExit()
+
         # me = scraper.InstagramBot(self.username.text, self.password.text, self.hashtags.text.split(','))
         
         
