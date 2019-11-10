@@ -1,7 +1,7 @@
 # Instagram-Like-Bot
 A simple Instagram like bot that likes posts based on the hashtags you provide.
 
- 
+### Run ```pip install -r requirements.txt``` in your shell.
 
 
 ### Requirements:
@@ -15,3 +15,11 @@ A simple Instagram like bot that likes posts based on the hashtags you provide.
 2. The UI will open up. Enter all the inputs. Rest assured, your password is safe.
 3. Click on the 'Submit' button.
 4. Sit back and watch how the bot goes.
+
+
+### Contributing
+#### Here's how you can contribute to the project: 
+- Open up issues.
+- Open up pull requests.
+- Fix bugs in the code.
+- Help with the documentation.
