@@ -78,8 +78,8 @@ class InstagramBot:
             
 
 
-# username = 'kevin.codes'
-# password = 'baloney5000'
+# username = 'uname'
+# password = '********'
 # hashtags = ['cpp', 'c', 'java', 'python']
 
 # if username != '' and password != '' and len(hashtags) > 0:
