@@ -8,7 +8,7 @@ A simple Instagram like bot that likes posts based on the hashtags you provide. 
 - Python 3.6 or higher
 - [Kivy](https://github.com/kivy/kivy), for devloping the GUI.
 - Selenium, for web automation.
-- webdriverdownloader, for downloading geckodriver for Firefox
+- webdriverdownloader, for downloading geckodriver for Firefox. You're free to use any browser, but you'll have to make the appropriate changes in `main.py`.
 
 ### Usage
 1. Run ```main.py```.
@@ -18,7 +18,8 @@ A simple Instagram like bot that likes posts based on the hashtags you provide. 
 
 
 ### Contributing
-#### Here's how you can contribute to the project: 
+#### Here's how you can contribute to the project:
+- Help with building the Android app. The debug version has been put up as a release, but it crashes every time I try to load the app.
 - Open up issues.
 - Open up pull requests.
 - Fix bugs in the code.
@@ -27,3 +28,4 @@ A simple Instagram like bot that likes posts based on the hashtags you provide. 
 ### Reach out to me on:
 1. [Twitter](https://www.twitter.com/kevin_codes)
 2. [Instagram](https://www.instagram.com/kevin.codes)
+3. Email [kevinam99@gmail.com](mailto:kevinam99@gmail.com)
