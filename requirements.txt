@@ -1,0 +1,4 @@
+webdriverdownloader==1.0.0.1
+Kivy==1.11.1
+selenium==3.141.0
+buildozer==0.39
