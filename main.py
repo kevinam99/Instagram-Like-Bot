@@ -8,6 +8,7 @@ from kivy.properties import ObjectProperty
 import scraper
 import webdriverdownloader as wdd
 
+
 # For Firefox gecko driver: 
 gecko_dd = wdd.GeckoDriverDownloader()
 gecko_dd.download_and_install()

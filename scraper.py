@@ -2,12 +2,19 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 import selenium
-
+from selenium.common.exceptions import ElementClickInterceptedException
+from selenium.common.exceptions import WebDriverException
 class InstagramBot:
     def __init__(self, username, password):
         self.username = username
         self.password = password
         self.bot = webdriver.Firefox()
+
+        # Uncomment following line for Chrome browser
+        # self.bot = webdriver.Chrome()
+        
+        # Uncomment following line for Opera browser
+        # self.bot = webdriver.Opera()
     
     def login(self):
         bot = self.bot
@@ -65,13 +72,9 @@ class InstagramBot:
                     click_ok = bot.find_element_by_class_name('RnEpo').click()
                     sleep(60 * 10)
                     break
-            except (selenium.common.exceptions.ElementClickInterceptedException):
-                # Occurs when too many posts have been liked at a time interval. The 'Action Blocked' popup shows
-                check_if_action_blocked = bot.find_element_by_class_name('RnEpo')
-                if check_if_action_blocked != None:
-                    click_ok = bot.find_element_by_class_name('RnEpo').click()
-                    sleep(60 * 10)
-                    break
+            
+            except (WebDriverException):
+                pass
                 
             except Exception as ex:
                 print(ex)
