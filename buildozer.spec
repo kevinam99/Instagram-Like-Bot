@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = Instagram Bot
+title = Kevin\'s Instagram Bot
 
 # (str) Package name
 package.name = IGbot
@@ -22,7 +22,7 @@ source.include_patterns = assets/*,data/*.png
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-#source.exclude_dirs = tests, bin
+source.exclude_dirs = tests, bin, build
 
 # (list) List of exclusions using pattern matching
 #source.exclude_patterns = license,images/*/*.jpg
@@ -55,7 +55,7 @@ icon.filename = %(source.dir)s/data/icon.png
 orientation = portrait
 
 # (list) List of service to declare
-services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
+# services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
 
 #
 # OSX Specific
@@ -75,26 +75,27 @@ osx.kivy_version = 1.9.1
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 0
+fullscreen = 1
 
 # (string) Presplash background color (for new android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-android.presplash_color = darkgrey
+android.presplash_color = white
 
 # (list) Permissions
-android.permissions = INTERNET
+android.permission = INTERNET ACCESS_NETWORK_STATE
+# android.permission = ACCESS_NETWORK_STATE
 
 # (int) Target Android API, should be as high as possible.
-#android.api = 27
+android.api = 28
 
 # (int) Minimum API your APK will support.
 #android.minapi = 21
 
 # (int) Android SDK version to use
-#android.sdk = 20
+#android.sdk = 26
 
 # (str) Android NDK version to use
 #android.ndk = 17c
@@ -123,10 +124,10 @@ android.permissions = INTERNET
 # agreements. This is intended for automation only. If set to False,
 # the default, you will be shown the license when first running
 # buildozer.
-# android.accept_sdk_license = False
+ #android.accept_sdk_license = True
 
 # (str) Android entry point, default is ok for Kivy-based app
-#android.entrypoint = org.renpy.android.PythonActivity
+#android.entrypoint = org.kevinam99.igbot
 
 # (list) Pattern to whitelist for the whole project
 #android.whitelist =
@@ -156,7 +157,7 @@ android.permissions = INTERNET
 #android.gradle_dependencies =
 
 # (list) Java classes to add as activities to the manifest.
-#android.add_activites = com.example.ExampleActivity
+android.add_activites = com.kevinam99.igbot
 
 # (str) python-for-android branch to use, defaults to master
 #p4a.branch = master
@@ -192,7 +193,7 @@ android.permissions = INTERNET
 #android.library_references =
 
 # (str) Android logcat filters to use
-#android.logcat_filters = *:S python:D
+android.logcat_filters = *:S python:D
 
 # (bool) Copy library instead of making a libpymodules.so
 #android.copy_libs = 1
@@ -248,7 +249,7 @@ ios.ios_deploy_branch = 1.7.0
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 1
+log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1
