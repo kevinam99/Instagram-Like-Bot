@@ -18,7 +18,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../Downloads/presplash.xpm</normaloff>../../../Downloads/presplash.xpm</iconset>
+    <normaloff>data/presplash.xpm</normaloff>data/presplash.xpm</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="submit_button">
@@ -163,7 +163,7 @@
      <string>Hashtags</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="reset_button">
     <property name="geometry">
      <rect>
       <x>360</x>
