@@ -50,7 +50,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(652, 415)
         MainWindow.setFocusPolicy(QtCore.Qt.TabFocus)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../Downloads/presplash.xpm"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("data/presplash.xpm"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
