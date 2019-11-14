@@ -4,3 +4,4 @@ bin/
 *.log
 .buildozer/
 log.txt
+kivy_gui.py
