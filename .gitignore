@@ -5,3 +5,5 @@ bin/
 .buildozer/
 log.txt
 kivy_gui.py
+bot.py
+main1.py
