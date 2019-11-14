@@ -1,11 +1,16 @@
 # Instagram-Like-Bot
 A simple Instagram like bot that likes posts based on the hashtags you provide. Helps with getting back likes and gaining followers who share the same interests as you.
 
+I've chosen to go with a minimalistic UI.
+
+![UI Screenshot](https://raw.githubusercontent.com/kevinam99/Instagram-Like-Bot/master/UI.png)
+
 ### Run ```pip install -r requirements.txt``` in your shell.
 
 
 ### Requirements:
 - Python 3.6 or higher
+- PyQt5, for building/editing the UI
 - [Kivy](https://github.com/kivy/kivy), for devloping the GUI.
 - Selenium, for web automation.
 - webdriverdownloader, for downloading geckodriver for Firefox. You're free to use any browser, but you'll have to make the appropriate changes in `main.py`.
