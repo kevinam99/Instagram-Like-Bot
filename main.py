@@ -8,11 +8,45 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from sys import exit
+import scraper
+import webdriverdownloader as wdd
+
+
+# For Firefox gecko driver: 
+gecko_dd = wdd.GeckoDriverDownloader()
+gecko_dd.download_and_install()
+
+# For Chrome driver:
+# chrome_dd = wdd.ChromeDriverDownloader()
+# chrome_dd.download_and_install()
+
+# For Opera driver:
+# opera_dd = wdd.OperaChromiumDriverDownloader()
+# opera_dd.download_and_install()
 
 
 class Ui_MainWindow(object):
     def run_bot(self):
-        print("clicked")
+        uname = self.username.text()
+        print(uname)
+        pwd = self.password.text()
+        print(pwd)
+        hashtags = self.hashtags.text()
+        if len(hashtags) > 2:
+            hashtags = hashtags.split(',')
+
+        if uname != '' and pwd != '' and len(hashtags) > 0:
+            me = scraper.InstagramBot(uname, pwd)
+            me.login()
+            print("Logged in as " + uname)
+            for hashtag in hashtags:
+                me.like_posts_in(hashtag)
+        else:
+            print("Enter all the relevant inputs.")
+                
+
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(652, 415)
