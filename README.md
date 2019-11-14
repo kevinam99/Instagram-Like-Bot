@@ -10,7 +10,7 @@ I've chosen to go with a minimalistic UI.
 
 ### Requirements:
 - Python 3.6 or higher
-- PyQt5, for building/editing the UI
+- PyQt5, for building/editing the UI ``` sudo apt-get install qt5-default ```
 - [Kivy](https://github.com/kivy/kivy), for devloping the GUI.
 - Selenium, for web automation.
 - webdriverdownloader, for downloading geckodriver for Firefox. You're free to use any browser, but you'll have to make the appropriate changes in `main.py`.
