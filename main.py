@@ -1,10 +1,5 @@
-# -*- coding: utf-8 -*-
-
 # Form implementation generated from reading ui file 'bot.ui'
-#
-# Created by: PyQt5 UI code generator 5.13.2
-#
-# WARNING! All changes made in this file will be lost!
+
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -42,10 +37,13 @@ class Ui_MainWindow(object):
             print("Logged in as " + uname)
             for hashtag in hashtags:
                 me.like_posts_in(hashtag)
-        else:
-            print("Enter all the relevant inputs.")
+            else:
+                print("Enter all the relevant inputs.")
                 
-
+    def reset_textfieds(self):
+        self.username.setText("")
+        self.password.setText("")
+        self.hashtags.setText("")
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -57,7 +55,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.submit_button = QtWidgets.QPushButton(self.centralwidget)
-        self.submit_button.setGeometry(QtCore.QRect(260, 270, 131, 41))
+        self.submit_button.setGeometry(QtCore.QRect(190, 260, 131, 41))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Condensed")
         font.setPointSize(15)
@@ -102,6 +100,9 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(190, 190, 91, 17))
         self.label_4.setObjectName("label_4")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(360, 260, 131, 41))
+        self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -124,7 +125,9 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Username"))
         self.label_3.setText(_translate("MainWindow", "Password"))
         self.label_4.setText(_translate("MainWindow", "Hashtags"))
+        self.pushButton.setText(_translate("MainWindow", "Reset"))
         self.submit_button.clicked.connect(self.run_bot)
+        self.pushButton.clicked.connect(self.reset_textfieds)
 
 
 
@@ -136,3 +139,4 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+    
