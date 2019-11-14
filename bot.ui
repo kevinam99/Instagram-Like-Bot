@@ -24,8 +24,8 @@
    <widget class="QPushButton" name="submit_button">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>270</y>
+      <x>190</x>
+      <y>260</y>
       <width>131</width>
       <height>41</height>
      </rect>
@@ -161,6 +161,19 @@
     </property>
     <property name="text">
      <string>Hashtags</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>260</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
     </property>
    </widget>
   </widget>
