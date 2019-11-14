@@ -4,6 +4,8 @@ from time import sleep
 import selenium
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.common.exceptions import WebDriverException
+
+post_count = 0
 class InstagramBot:
     def __init__(self, username, password):
         self.username = username
@@ -35,7 +37,7 @@ class InstagramBot:
         bot = self.bot
         bot.get('https://www.instagram.com/explore/tags/' + hashtag +'/')
         sleep(5)
-        for i in range(2):
+        for i in range(10):
             bot.execute_script('window.scrollTo(0, document.body.scrollHeight)')
             sleep(2)
         
@@ -48,33 +50,41 @@ class InstagramBot:
             5.Repeat procedure for next post.
 
         """
+        print("Getting posts to like...")
         posts = bot.find_elements_by_class_name('v1Nh3')
-        print(type (posts))
-
-        for post in posts:
+        print("Liking posts...")
+        for post in range(9, len(posts)):
             try:
-                i = 1
-                post.click()
-                sleep(2)
+                global post_count
+                posts[post].click()
+                sleep(5)
                 like_button = bot.find_element_by_class_name('fr66n').click()
+                print("Post liked!")
                 sleep(2)
                 close_button = bot.find_element_by_class_name('ckWGn').click()
                 sleep(2)
-                i = i + 1
-                if i == 29:
+                post_count = post_count + 1
+                print(post_count)
+
+                if post_count == 29:
+                    print("Reached limit. Cooling down...")
                     sleep(60 * 10)
-                    i = 1
-                    break
+                    post_count = 0
+                    print("Cool down complete. Restarting...")
+                    like_posts_in()
+
             except (selenium.common.exceptions.ElementClickInterceptedException):
                 # Occurs when too many posts have been liked at a time interval. The 'Action Blocked' popup shows
                 check_if_action_blocked = bot.find_element_by_class_name('RnEpo')
                 if check_if_action_blocked != None:
                     click_ok = bot.find_element_by_class_name('RnEpo').click()
                     sleep(60 * 10)
-                    break
+                    like_posts_in()
             
-            except (WebDriverException):
-                pass
+            except (KeyboardInterrupt):
+                print("I'm done")
+                bot.close()
+                bot.quit()
                 
             except Exception as ex:
                 print(ex)
