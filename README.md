@@ -1,6 +1,7 @@
 # Instagram-Like-Bot
 [![Follow me on Twitter](https://img.shields.io/twitter/follow/kevin_codes?style=social)](https://twitter.com/kevin_codes)
 ![Star this repository](https://img.shields.io/github/stars/kevinam99/Instagram-Like-Bot?style=social)
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/kevinam99)
 
 A simple Instagram like bot that likes posts based on the hashtags you provide. Helps with getting back likes and gaining followers who share the same interests as you.
 
