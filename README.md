@@ -1,5 +1,5 @@
 # Instagram-Like-Bot
-[![Follow me on Twitter](https://img.shields.io/twitter/follow/kevin_codes?style=social)](https://twitter.com/kevin_codes)
+[![Follow me on Twitter](https://img.shields.io/twitter/follow/thiskevinguy?style=social)](https://twitter.com/thiskevinguy)
 ![Star this repository](https://img.shields.io/github/stars/kevinam99/Instagram-Like-Bot?style=social)
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/kevinam99)
 
